@@ -44,7 +44,7 @@ const generatePassword = async () => {
 const upadatePassIndicator = () => {
     // if lengthSlider value is less than 8 then pass "weak" as passIndicator id else if lengthSlider 
     // value is less than 16 then pass "medium" as id else pass "strong" as id
-    passIndicator.id = lengthSlider.value <= 6 ? "weak" : lengthSlider.value <= 12 ? "medium" : "strong";
+    passIndicator.id = lengthSlider.value <= 6 ? "weak" : lengthSlider.value < 12 ? "medium" : "strong";
     length = lengthSlider.value
 }
 
